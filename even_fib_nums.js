@@ -5,11 +5,26 @@
  * @param  {Number} maxFibValue
  * @return {Number} sum
  */
+
+//maxFibValue outputs the largest fib value under or equal to the number its given.
+
 function _sumFibs( maxFibValue ) {
   var sum = 0;
+  var a = 1;
+  var b = 2;
+  var currentNum = 0;
+  sum = 2;
 
-  // do your work here
-
+  while(a + b <= maxFibValue) {  //change this
+    currentNum = a + b;
+    console.log("currNum", currentNum);
+    if(currentNum % 2 === 0) {
+      sum += currentNum;
+      console.log("even",sum);
+    }
+    a = b;
+    b = currentNum;
+  }
   return sum;
 }
 

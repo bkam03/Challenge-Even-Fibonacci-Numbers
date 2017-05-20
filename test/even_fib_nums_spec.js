@@ -42,3 +42,27 @@ describe( 'Highest number in Fibonacci sequence', function() {
 
 
 //STRETCH GOALS: Define another way you could write a function for a fibonacci number and write passing tests
+describe( 'another way of finding fibonacci numbers', function() {
+  it( 'should return fibonacci number closest to given input(above or below 27)', function() {
+    var closest = fibonnaciNums.closestFibonacci( 27 );
+    closest.should.equal( 21 );
+  });
+  it( 'should return fibonacci number closest to given input(above or below -3)', function() {
+    var closest = fibonnaciNums.closestFibonacci( -3 );
+    closest.should.equal( 1 );
+  });
+  it( 'should return fibonacci number closest to given input(above or below 2)', function() {
+    var closest = fibonnaciNums.closestFibonacci( 2 );
+    closest.should.equal( 2 );
+  });
+  it( 'should return fibonacci number closest to given input(above or below 345634853746)', function() {
+    var closest = fibonnaciNums.closestFibonacci( 345634853746 );
+    closest.should.equal( 365435296162 );
+  });
+  it( 'should return fibonacci number closest to given input(above or below 72)', function() {
+    var closest = fibonnaciNums.closestFibonacci( 72 );
+    closest.should.equal( "55 or 89" );
+  });
+
+});
+

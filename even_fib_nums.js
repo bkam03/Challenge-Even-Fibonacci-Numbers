@@ -9,18 +9,16 @@
 //maxFibValue outputs the largest fib value under or equal to the number its given.
 
 function _sumFibs( maxFibValue ) {
-  var sum = 0;
+  var sum = 0;  // initiate sum, two containers to hold fibonacci factors, var for new fib num.
   var a = 1;
   var b = 2;
   var currentNum = 0;
-  sum = 2;
+  sum = 2;   //initialize sum with 2, since it is a seed and will not be processed normally as even.
 
-  while(a + b <= maxFibValue) {  //change this
+  while(a + b <= maxFibValue) {
     currentNum = a + b;
-    console.log("currNum", currentNum);
     if(currentNum % 2 === 0) {
       sum += currentNum;
-      console.log("even",sum);
     }
     a = b;
     b = currentNum;
@@ -31,9 +29,28 @@ function _sumFibs( maxFibValue ) {
 // bonus round
 function _highestFibonacciNumber (maxFibValue){
   var highest = 0;
-
   //define your base case, validate your input
+  var a = 1;
+  var b = 2;
 
+  switch(true) {
+    case(maxFibValue>=3):
+      break;
+    case 1:
+      return 1;
+      break;
+    case 2:
+      return 2;
+      break;
+    default:
+      return "invalid";
+  }
+
+  while(a + b <= maxFibValue) {
+    highest = a + b;
+    a = b;
+    b = highest;
+  }
 
   //do your work here
 
